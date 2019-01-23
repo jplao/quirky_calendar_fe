@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/turingschool-examples/game-time-starter-kit-FEm1.git"
+    "url": "git+https://github.com/turingschool-projects/self-directed-fe-starter.git"
   },
   "author": "Turing School of Software and Design",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/turingschool-examples/quantified-self-starter-kit/issues"
+    "url": "https://github.com/turingschool-projects/self-directed-fe-starter/issues"
   },
-  "homepage": "https://github.com/turingschool-examples/quantified-self-starter-kit#readme",
+  "homepage": "https://github.com/turingschool-projects/self-directed-fe-starter#readme",
   "devDependencies": {
     "babel": "^6.5.2",
     "babel-core": "^6.18.2",
