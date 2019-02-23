@@ -2,7 +2,7 @@
 
 ## Initial Setup
 
-!(Wireframes)[Wireframes.png]
+![Wireframes](Wireframes.png)
 
 
 ## Built With
