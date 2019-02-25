@@ -1,0 +1,20 @@
+body {
+  background-color: #5CBBFC;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  font-size: 20px;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+h2 {
+  color: #D5F9F3;
+  font-size: 45px;
+}
+
+.header {
+  background-color: #B5EE93;
+  padding: 1px;
+}

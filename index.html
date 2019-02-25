@@ -2,15 +2,26 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Self Directed FD Starter</title>
+  <link rel="stylesheet" type="text/css" href='lib/styles.css'>
+  <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <title>Quirky Calendar</title>
 </head>
 <body>
-      <!--  the a tag below can link you to another HTML page  -->
-      <!--  if you click the button in the browser right now, you'll get an error because that is not a real file path -->
-      <a href="<file path"><button class="default-button">GO TO OTHER PAGE</button></a>
+  <div class='header'>
+    <h1> Quirky Calendar </h1>
+  </div>
+  <div class='today'>
+    <h2> Today's quirks: </h2>
+    <p id='holidays'>
+    </p>
+  </div>
+
     <script
     src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'>
   </script>
+  <script type='text/javascript' src='config.js'></script>
+  <script src="lib/index.js"></script>
   <script src="main.bundle.js"></script>
 </body>
 </html>
