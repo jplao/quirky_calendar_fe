@@ -11,8 +11,14 @@
   <div class='header'>
     <h1> Quirky Calendar </h1>
   </div>
+  <div class='search'>
+    <br>
+    <input id='term' type='text' placeholder='Enter a quirky term'>
+    <button class='button' onclick="getSearch()">Search for quirky holidays</button>
+  </div>
+
   <div class='today'>
-    <h2> Today's quirks: </h2>
+    <h2 id='title'></h2>
     <p id='holidays'>
     </p>
   </div>
