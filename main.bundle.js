@@ -90,7 +90,7 @@
 	  fetch(url).then(function (response) {
 	    return response.json();
 	  }).then(function (json_response) {
-	    _this3.showHolidays(json_response, "Favorite");
+	    _this3.showFavorites(json_response);
 	  });
 	  showClass("favorites");
 	}
@@ -157,6 +157,37 @@
 	  holidayArray['data'].forEach(function (holiday) {
 	    var name = holiday['attributes']['name'];
 	    var holiday_data = '<h3><button class="button" onclick="addFav(' + holiday['id'] + ')"><i class="far fa-heart"></i></button> ' + name + '</h3>';
+	    appendData(holiday_data, "holidays");
+	  });
+	}
+
+	function showFavorites(json_response) {
+	  var month = new Array();
+	  month[0] = "January";
+	  month[1] = "February";
+	  month[2] = "March";
+	  month[3] = "April";
+	  month[4] = "May";
+	  month[5] = "June";
+	  month[6] = "July";
+	  month[7] = "August";
+	  month[8] = "September";
+	  month[9] = "October";
+	  month[10] = "November";
+	  month[11] = "December";
+
+	  setTitle("Favorite");
+	  removeChildren("holidays");
+	  var holidayArray = json_response;
+	  var holiday_list = document.getElementById("holidays");
+	  holidayArray['data'].forEach(function (holiday) {
+	    var name = holiday['attributes']['name'];
+	    var date = new Date(holiday['attributes']['date']);
+	    var dd = date.getDate();
+	    var mm = month[date.getMonth()];
+	    var date = mm + ' ' + dd;
+
+	    var holiday_data = '<h3><i class="fas fa-heart"></i> ' + name + ' - ' + date + '</h3>';
 	    appendData(holiday_data, "holidays");
 	  });
 	}
