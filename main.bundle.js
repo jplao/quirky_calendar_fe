@@ -82,6 +82,19 @@
 	  });
 	}
 
+	function getFavorites() {
+	  var _this3 = this;
+
+	  var api_key = sessionStorage.getItem("api_key");
+	  var url = "https://quirkycalendar.herokuapp.com/api/v1/favorites?api_key=" + api_key;
+	  fetch(url).then(function (response) {
+	    return response.json();
+	  }).then(function (json_response) {
+	    _this3.showHolidays(json_response, "Favorite");
+	  });
+	  showClass("favorites");
+	}
+
 	var registerUser = function registerUser(event) {
 	  event.preventDefault();
 	  var payload = {
@@ -148,8 +161,26 @@
 	  });
 	}
 
-	function addFav(id) {
-	  var holiday_id = id;
+	function addFav(holiday_id) {
+	  var _this4 = this;
+
+	  var payload = {
+	    holiday_id: '' + holiday_id,
+	    api_key: sessionStorage.getItem("api_key")
+	  };
+	  var url = "https://quirkycalendar.herokuapp.com/api/v1/favorites";
+	  fetch(url, {
+	    method: 'POST',
+	    headers: { 'Accept': 'application/json',
+	      'Content-Type': 'application/json' },
+	    body: JSON.stringify(payload)
+	  }).then(function (response) {
+	    return response.json();
+	  }).catch(function (error) {
+	    return console.error(error);
+	  }).then(function (json_response) {
+	    return _this4.getFavorites(json_response);
+	  });
 	}
 
 	function setTitle(query) {
