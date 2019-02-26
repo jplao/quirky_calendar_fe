@@ -9,18 +9,49 @@
 </head>
 <body>
   <div class='header'>
+    <button class='button' id="logout-btn" onclick="logoutUser()" style="float:right; display:none">Log Out</button>
+    <button class='button' id="login-btn" onclick="displayLoginForm()" style="float:right">Login</button>
+    <button class='button' id="reg-btn" onclick="displayRegisterForm()" style="float:right">Register</button>
     <h1> Quirky Calendar </h1>
   </div>
   <div class='search'>
     <br>
     <input id='term' type='text' placeholder='Enter a quirky term'>
     <button class='button' onclick="getSearch()">Search for quirky holidays</button>
+    <button class='button' id='favorites-btn' style="display:none" onclick="getFavorites()">Show Favorites</button>
   </div>
 
   <div class='today'>
     <h2 id='title'></h2>
-    <p id='holidays'>
-    </p>
+    <section id='holidays'>
+    </section>
+  </div>
+
+  <div class='register'>
+    <form name='register' id='register_form' style="display:none">
+      <label for="email"><b><span>Email:</span></b></label>
+      <input id='email' type="text" placeholder="Enter Email" name="email"><br>
+
+      <label for="psw"><b><span>Password:</span></b></label>
+      <input id='psw' type="password" placeholder="Enter Password" name="psw"><br>
+
+      <label for="psw-repeat"><b><span>Password Confirmation:</span></b></label>
+      <input id='psw-repeat' type="password" placeholder="Repeat Password" name="psw_repeat"><br>
+
+      <button class='button' id='register-btn' type="submit">Submit</button>
+    </form>
+  </div>
+
+  <div class='login'>
+    <form name='login' id='login_form' style="display:none">
+      <label for="email"><b><span>Email:</span></b></label>
+      <input id='login_email' type="text" placeholder="Enter Email" name="email"><br>
+
+      <label for="psw"><b><span>Password:</span></b></label>
+      <input id='login_psw' type="password" placeholder="Enter Password" name="psw"><br>
+
+      <button class='button' id='submit-login-btn' type="submit">Login</button>
+    </form>
   </div>
 
     <script
